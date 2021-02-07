@@ -1,5 +1,6 @@
 // App consts:
 const PHOTOS_PER_BUNCH = 5;
+const TIME_BETWEEN_PHOTOS_APPEARANCE = 500;
 
 // Dev consts:
 const DEV_MODE = true;
@@ -56,12 +57,13 @@ const getNewPhotoImageElement = (photo) => {
   return mainCard;
 }
 
-const renderNewPhotosBunch = (photosBunch) => {
+const renderNewPhotosBunch = async (photosBunch) => {
   const photosContainer = document.getElementById('photos-main-container');
 
-  photosBunch.forEach((photo, i) => {
+  for (const photo of photosBunch) {
     photosContainer.appendChild(getNewPhotoImageElement(photo));
-  });
+    await waitFor(TIME_BETWEEN_PHOTOS_APPEARANCE);
+  }
 
 }
 
