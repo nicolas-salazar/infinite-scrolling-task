@@ -1,13 +1,33 @@
 :root {
+  --light-bg-color: #314e52;
   --main-bg-color: #e7e6e1;
-  --main-text-color: #f2a154;
-  --white: #fff;
+  
+  --main-dots-animation: backgroundAnimatorKF; 
+
   --black: #000;
+  --white: #fff;
 }
 
 body{
-  background-color:var(--light-bg-color);
+  animation-duration: 180s;
+  animation-iteration-count: infinite;
+  animation-name: var(--main-dots-animation);
+  animation-timing-function: linear;
+  background-color: var(--light-bg-color);
+  background-image: radial-gradient(var(--white) 20%, transparent 20%);
+  background-size: 10px 10px;
   color: var(--white);
+  height: 100vh;
+  margin: 0px;
+}
+
+@keyframes backgroundAnimatorKF {
+  from {
+    background-position: -100% -100%;
+  }
+  to { 
+    background-position: 100% 100%;
+  }
 }
 
 .centered-container{
