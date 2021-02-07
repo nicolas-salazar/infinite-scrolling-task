@@ -1,0 +1,52 @@
+:root {
+  --light-bg-color: #314e52;
+  --light-text-color: #f7f6e7;
+  --main-bg-color: #e7e6e1;
+  --main-text-color: #f2a154;
+  --white: #fff;
+  --black: #000;
+}
+
+body{
+  background-color:var(--light-bg-color);
+  color: var(--main-text-color);
+}
+
+.centered-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+  height: 250px;
+  width: 500px;
+}
+
+.card .body{
+  flex: 4;
+  width: 100%;
+}
+
+.card .footer{
+  background-color: var(--main-text-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: var(--black);
+  flex: 1;
+  width: 100%;
+}
+
+.d-column{
+  flex-direction: column;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.w-100{
+  width: 100%;
+}
