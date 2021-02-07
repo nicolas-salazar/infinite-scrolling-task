@@ -5,17 +5,26 @@
   width: 90vw;
 }
 
-.card .body{
+.card-body{
+  background-color: var(--black);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   flex: 7;
   width: 100%;
 }
 
-.card .footer{
+.card-footer{
+  align-items: center;
   background-color: var(--main-text-color);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  color: var(--black);
+  box-sizing: border-box;
+  color: var(--white);
+  display: flex;
   flex: 1;
+  justify-content: flex-end;
+  padding-left: 5%;
+  padding-right: 5%;
   width: 100%;
 }
 

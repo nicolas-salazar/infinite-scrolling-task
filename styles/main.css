@@ -1,6 +1,4 @@
 :root {
-  --light-bg-color: #314e52;
-  --light-text-color: #f7f6e7;
   --main-bg-color: #e7e6e1;
   --main-text-color: #f2a154;
   --white: #fff;
@@ -9,7 +7,7 @@
 
 body{
   background-color:var(--light-bg-color);
-  color: var(--main-text-color);
+  color: var(--white);
 }
 
 .centered-container{

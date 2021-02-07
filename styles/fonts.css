@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
+:root{
+  --light-bg-color: #314e52;
+  --light-text-color: #f7f6e7;
+}
+
 body{
   font-family: 'Hammersmith One', sans-serif;
 }
