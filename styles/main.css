@@ -49,12 +49,6 @@ body{
   padding-top: 1.5vh;
 }
 
-.main-container .photo{
-  height: 100%;
-  object-fit: contain;
-  width: 100%;
-}
-
 .w-50{
   width: 50%;
 }

@@ -1,0 +1,13 @@
+.main-container .photo{
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.main-container .photo-author{
+  color: var(--white);
+}
+
+.main-container .photo-description{
+  color: var(--light-bg-color);
+}

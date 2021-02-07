@@ -23,7 +23,7 @@ const getPhotosBunchFromUnsplashApi = async () => {
 
 // Functions for rendering new photos on DOM:
 const renderNewPhotosBunch = (photosBunch) => {
-
+  console.log('NSALAZAR. photosBunch:', photosBunch);
 }
 
 // Functions for requesting new photos actioned by scroll behaviour:
@@ -33,3 +33,10 @@ const getMorePhotos = async () => {
 
   return obtainedPhotos;
 }
+
+const printMorePhotos = async () => {
+  const newPhotosBunch = await getMorePhotos();
+  renderNewPhotosBunch(newPhotosBunch);
+}
+
+// Initialization:
