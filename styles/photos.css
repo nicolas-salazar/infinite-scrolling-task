@@ -6,8 +6,16 @@
 
 .main-container .photo-author{
   color: var(--white);
+  cursor: pointer;
+  flex: 2;
+  text-align: right;
 }
 
 .main-container .photo-description{
   color: var(--light-bg-color);
+  cursor: default;
+  flex: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

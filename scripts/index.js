@@ -41,6 +41,7 @@ const getNewPhotoImageElement = (photo) => {
   const photoDescription = document.createElement('span');
   photoDescription.className = 'photo-description';
   photoDescription.innerHTML = photo.alt_description || '...';
+  photoDescription.title = photo.alt_description || 'No description';
 
   const photoAuthor = document.createElement('span');
   photoAuthor.className = 'photo-author';
