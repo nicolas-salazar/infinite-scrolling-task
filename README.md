@@ -14,7 +14,7 @@ There are only a couple things you need to know about my code before starting:
   >   [ALERT ⚠️] **Unsplash api** is a free api for getting cool photos but, in order to have big access, the guys there may approve my app first. So, as I don't have time enough for waiting for approval, got what they call a **demo** api key, which allows me to fire 50 request/hr. In short therms: don't abuse 🥲.
 
 
-  If you get out of quota, I built a cool solution for you 😁. Previously fired 90+ photo request and saved the responses on `mockData.js` file. For using it, just go to `index.js` file and change DEV_MODE variable to true.
+  If you get out of quota, I built a cool solution for you 😁. Previously fired 90+ photo requests and saved the responses on `mockData.js` file. For using it, just go to `index.js` file and change DEV_MODE variable to true.
   
       2. DEV_MODE = true
 
@@ -25,7 +25,6 @@ There are only a couple things you need to know about my code before starting:
 
 #### _All your feedback is welcome. Anything missing? Please let me know!_
 <br/>
----
 
 # How to run it? 🧐
 Just open `index.html` file in the browser you like.
