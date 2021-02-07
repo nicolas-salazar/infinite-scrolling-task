@@ -2,8 +2,6 @@
 
 By: Nicolás Góngora Salazar
 
-<br />
-
 ---
 
 # Getting started with Nicolás's resolution! 😎 
@@ -24,7 +22,6 @@ There are only a couple things you need to know about my code before starting:
 - Built with 💖 from **Colombia** 🇨🇴
 
 #### _All your feedback is welcome. Anything missing? Please let me know!_
-<br/>
 
 # How to run it? 🧐
 Just open `index.html` file in the browser you like.
