@@ -1,6 +1,10 @@
 // App consts:
+const PHOTOS_CONTAINER_ID = 'photos-main-container';
 const PHOTOS_PER_BUNCH = 5;
 const TIME_BETWEEN_PHOTOS_APPEARANCE = 500;
+
+// App variables:
+let loadingPhotos = false;
 
 // Dev consts:
 const DEV_MODE = true;
@@ -58,16 +62,27 @@ const getNewPhotoImageElement = (photo) => {
 }
 
 const renderNewPhotosBunch = async (photosBunch) => {
-  const photosContainer = document.getElementById('photos-main-container');
+  const photosContainer = document.getElementById(PHOTOS_CONTAINER_ID);
 
   for (const photo of photosBunch) {
     photosContainer.appendChild(getNewPhotoImageElement(photo));
     await waitFor(TIME_BETWEEN_PHOTOS_APPEARANCE);
   }
 
+  loadingPhotos = false;
 }
 
 // Functions for requesting new photos actioned by scroll behaviour:
+const addScrollListenerToPhotosContainer = () => {
+  window.addEventListener("scroll", function (event) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      if (!loadingPhotos) {
+        printMorePhotos();
+      }
+    }
+  });
+}
+
 const getMorePhotos = async () => {
   const targetFunction = DEV_MODE ? getPhotosBunchFromMockData : getgetPhotosBunchFromUnsplashApi;
   const obtainedPhotos = await targetFunction();
@@ -76,8 +91,13 @@ const getMorePhotos = async () => {
 }
 
 const printMorePhotos = async () => {
-  const newPhotosBunch = await getMorePhotos();
-  renderNewPhotosBunch(newPhotosBunch);
+  if (!loadingPhotos) {
+    loadingPhotos = true;
+    const newPhotosBunch = await getMorePhotos();
+    renderNewPhotosBunch(newPhotosBunch);
+  }
 }
 
 // Initialization:
+addScrollListenerToPhotosContainer();
+printMorePhotos();
