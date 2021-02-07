@@ -1,14 +1,18 @@
+:root{
+  --main-border-radius: 5px;
+}
+
 .card{
   background-color: var(--main-bg-color);
-  border-radius: 5px;
+  border-radius: var(--main-border-radius);
   height: 85vh;
   width: 90vw;
 }
 
 .card-body{
   background-color: var(--black);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: var(--main-border-radius);
+  border-top-right-radius: var(--main-border-radius);
   flex: 7;
   width: 100%;
 }
@@ -16,8 +20,8 @@
 .card-footer{
   align-items: center;
   background-color: var(--main-text-color);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: var(--main-border-radius);
+  border-bottom-right-radius: var(--main-border-radius);
   box-sizing: border-box;
   color: var(--white);
   display: flex;
