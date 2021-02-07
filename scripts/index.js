@@ -1,3 +1,6 @@
+// Dev consts:
+const DEV_MODE = false;
+
 // App consts:
 const PHOTOS_CONTAINER_ID = 'photos-main-container';
 const PHOTOS_PER_BUNCH = 5;
@@ -5,9 +8,6 @@ const TIME_BETWEEN_PHOTOS_APPEARANCE = 500;
 
 // App variables:
 let loadingPhotos = false;
-
-// Dev consts:
-const DEV_MODE = false;
 
 // Functions for fetching new photos via unsplash api:
 const UNSPLASH_API_KEY = 'yTo9-Xn72MaLp22BLXZJkM9qfeda9LBJSPR4SSmXT1E';
