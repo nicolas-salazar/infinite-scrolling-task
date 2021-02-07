@@ -15,7 +15,8 @@
   background-color: var(--black);
   border-top-left-radius: var(--main-border-radius);
   border-top-right-radius: var(--main-border-radius);
-  flex: 7;
+  height: 100%;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -27,8 +28,9 @@
   box-sizing: border-box;
   color: var(--white);
   display: flex;
-  flex: 1;
+  height: 35px;
   justify-content: flex-end;
+  min-height: 35px;
   padding-left: 5%;
   padding-right: 5%;
   width: 100%;

@@ -36,16 +36,23 @@ body{
   justify-content: center;
 }
 
+.d-column{
+  flex-direction: column;
+}
+
 .main-container{
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-height: 100%;
+  padding-top: 1.5vh;
 }
 
-.d-column{
-  flex-direction: column;
+.main-container .photo{
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .w-50{
