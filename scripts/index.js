@@ -23,7 +23,7 @@ const getPhotosBunchFromUnsplashApi = async () => {
 
 // Functions for rendering new photos on DOM:
 const getNewPhotoImageElement = (photo) => {
-  
+
   // Main card:
   const mainCard = document.createElement('div');
   mainCard.className = 'card centered-container d-column';
@@ -45,7 +45,9 @@ const getNewPhotoImageElement = (photo) => {
 
   const photoAuthor = document.createElement('span');
   photoAuthor.className = 'photo-author';
-  photoAuthor.innerHTML = 'by: <b>' + (photo.user.instagram_username || photo.user.username) + '</b>';
+  const targetUsername = photo.user.instagram_username || photo.user.username;
+  const targetUserProfilePage = (photo.user.instagram_username) ? `https://www.instagram.com/${photo.user.instagram_username}/` : `https://unsplash.com/@${photo.user.username}`;
+  photoAuthor.innerHTML = `by: <b><a class="author-ref" href="${targetUserProfilePage}" target="_blank">${targetUsername}</a></b>`;
 
   cardFooter.appendChild(photoDescription);
   cardFooter.appendChild(photoAuthor);
@@ -56,7 +58,7 @@ const getNewPhotoImageElement = (photo) => {
 
 const renderNewPhotosBunch = (photosBunch) => {
   const photosContainer = document.getElementById('photos-main-container');
-  
+
   photosBunch.forEach((photo, i) => {
     photosContainer.appendChild(getNewPhotoImageElement(photo));
   });

@@ -1,7 +1,20 @@
+:root{
+  --links-hover-color: rgb(32,109,197); 
+}
+
 .main-container .photo{
   height: 100%;
   object-fit: contain;
   width: 100%;
+}
+
+.main-container .author-ref{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.main-container .author-ref:hover{
+  color: var(--links-hover-color);
 }
 
 .main-container .photo-author{
