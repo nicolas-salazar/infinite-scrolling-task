@@ -21,15 +21,6 @@ body{
   margin: 0px;
 }
 
-@keyframes backgroundAnimatorKF {
-  from {
-    background-position: -100% -100%;
-  }
-  to { 
-    background-position: 100% 100%;
-  }
-}
-
 .centered-container{
   align-items: center;
   display: flex;

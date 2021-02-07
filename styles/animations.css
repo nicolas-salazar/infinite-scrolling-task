@@ -1,0 +1,40 @@
+:root{
+  --fadeInRight-translate-origin: 100px;
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRightKF;
+  animation-name: fadeInRightKF;
+} 
+
+@keyframes backgroundAnimatorKF {
+  from {
+    background-position: -100% -100%;
+  }
+  to { 
+    background-position: 100% 100%;
+  }
+}
+
+
+@-webkit-keyframes fadeInRightKF {
+  0% {
+     opacity: 0;
+     -webkit-transform: translateX(var(--fadeInRight-translate-origin));
+  }
+  100% {
+     opacity: 1;
+     -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightKF {
+  0% {
+     opacity: 0;
+     transform: translateX(var(--fadeInRight-translate-origin));
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}

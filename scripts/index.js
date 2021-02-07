@@ -26,7 +26,7 @@ const getNewPhotoImageElement = (photo) => {
 
   // Main card:
   const mainCard = document.createElement('div');
-  mainCard.className = 'card centered-container d-column';
+  mainCard.className = 'card centered-container d-column fadeInRight';
 
   // Card's body:
   const cardBody = document.createElement('div');

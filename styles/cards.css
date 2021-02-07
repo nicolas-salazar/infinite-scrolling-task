@@ -9,6 +9,11 @@
   margin-bottom: 1.5vh;
   margin-top: 1.5vh;
   width: 90vw;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .card-body{
