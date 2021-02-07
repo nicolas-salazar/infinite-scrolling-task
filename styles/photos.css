@@ -21,7 +21,10 @@
   color: var(--white);
   cursor: pointer;
   flex: 2;
+  overflow: hidden;
   text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .main-container .photo-description{
@@ -31,4 +34,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+
+@media screen and (min-width: 480px) {
+  .main-container .photo-author{
+    flex: 4;
+  }
 }
