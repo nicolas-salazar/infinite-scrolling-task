@@ -7,7 +7,7 @@ const TIME_BETWEEN_PHOTOS_APPEARANCE = 500;
 let loadingPhotos = false;
 
 // Dev consts:
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 // Functions for fetching new photos via unsplash api:
 const UNSPLASH_API_KEY = 'yTo9-Xn72MaLp22BLXZJkM9qfeda9LBJSPR4SSmXT1E';
@@ -75,9 +75,8 @@ const renderNewPhotosBunch = async (photosBunch) => {
 // Functions for requesting new photos actioned by scroll behaviour:
 const addScrollListenerToPhotosContainer = () => {
   window.addEventListener("scroll", function (event) {
-    if (window.innerHeight + window.scrollY >= (document.body.offsetHeight / 2)) {
+    if (window.innerHeight + window.scrollY >= (2 * document.body.offsetHeight / 4)) {
       if (!loadingPhotos) {
-        console.log('NSALAZAR. Downloading more photos...');
         printMorePhotos();
       }
     }
@@ -85,7 +84,7 @@ const addScrollListenerToPhotosContainer = () => {
 }
 
 const getMorePhotos = async () => {
-  const targetFunction = DEV_MODE ? getPhotosBunchFromMockData : getgetPhotosBunchFromUnsplashApi;
+  const targetFunction = DEV_MODE ? getPhotosBunchFromMockData : getPhotosBunchFromUnsplashApi;
   const obtainedPhotos = await targetFunction();
 
   return obtainedPhotos;
