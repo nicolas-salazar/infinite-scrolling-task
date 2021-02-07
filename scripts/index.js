@@ -75,8 +75,9 @@ const renderNewPhotosBunch = async (photosBunch) => {
 // Functions for requesting new photos actioned by scroll behaviour:
 const addScrollListenerToPhotosContainer = () => {
   window.addEventListener("scroll", function (event) {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    if (window.innerHeight + window.scrollY >= (document.body.offsetHeight / 2)) {
       if (!loadingPhotos) {
+        console.log('NSALAZAR. Downloading more photos...');
         printMorePhotos();
       }
     }
