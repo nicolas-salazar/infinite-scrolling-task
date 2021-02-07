@@ -6171,7 +6171,7 @@ const MOCK_RESPONSE_TIME = 1500;
 var lastFetchedIndex = 0;
 var photoSet = [...mockPhotos, ...mockPhotosB, ...mockPhotosC];
 
-const getPhotosFromServer_Mock = (bunchSize = 5) => {
+const getPhotosBunchFromMockData = (bunchSize = 5) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       let targetArray = photoSet.slice(lastFetchedIndex, lastFetchedIndex + bunchSize);
