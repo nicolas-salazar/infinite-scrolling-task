@@ -22,8 +22,44 @@ const getPhotosBunchFromUnsplashApi = async () => {
 }
 
 // Functions for rendering new photos on DOM:
+const getNewPhotoImageElement = (photo) => {
+  
+  // Main card:
+  const mainCard = document.createElement('div');
+  mainCard.className = 'card centered-container d-column';
+
+  // Card's body:
+  const cardBody = document.createElement('div');
+  cardBody.className = 'card-body';
+  cardBody.innerHTML = `<img class="photo" src="${photo.urls.regular}"/>`;
+  mainCard.appendChild(cardBody);
+
+  // Card's footer:
+  const cardFooter = document.createElement('div');
+  cardFooter.className = 'card-footer';
+
+  const photoDescription = document.createElement('span');
+  photoDescription.className = 'photo-description';
+  photoDescription.innerHTML = photo.alt_description || '...';
+
+  const photoAuthor = document.createElement('span');
+  photoAuthor.className = 'photo-author';
+  photoAuthor.innerHTML = 'by: <b>' + (photo.user.instagram_username || photo.user.username) + '</b>';
+
+  cardFooter.appendChild(photoDescription);
+  cardFooter.appendChild(photoAuthor);
+  mainCard.appendChild(cardFooter);
+
+  return mainCard;
+}
+
 const renderNewPhotosBunch = (photosBunch) => {
-  console.log('NSALAZAR. photosBunch:', photosBunch);
+  const photosContainer = document.getElementById('photos-main-container');
+  
+  photosBunch.forEach((photo, i) => {
+    photosContainer.appendChild(getNewPhotoImageElement(photo));
+  });
+
 }
 
 // Functions for requesting new photos actioned by scroll behaviour:
