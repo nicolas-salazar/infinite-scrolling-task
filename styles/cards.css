@@ -1,0 +1,41 @@
+.card{
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+  height: 85vh;
+  width: 90vw;
+}
+
+.card .body{
+  flex: 4;
+  width: 100%;
+}
+
+.card .footer{
+  background-color: var(--main-text-color);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: var(--black);
+  flex: 1;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .card{
+    height: 85vh;
+    width: 75vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card{
+    height: 65vh;
+    width: 55vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card{
+    height: 60vh;
+    width: 45vw;
+  }
+}
